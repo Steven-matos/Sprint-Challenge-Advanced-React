@@ -10,7 +10,7 @@ const Players = ({data}) => {
     return (
         <Col>
             <Card className='cards'>
-                <CardHeader>{data.name}</CardHeader>
+                <CardHeader>Player: {data.name}</CardHeader>
                 <CardBody>
                     <CardTitle>Country: {data.country}</CardTitle>
                 </CardBody>

@@ -25,7 +25,7 @@ class PlayerCards extends Component {
 
     render() {
         return (
-            <Container className="themed-container" fluid="sm">
+            <Container data-testid="rendered" className="themed-container" fluid="sm">
             <Row xs="3">
                 {this.state.soccerPlayer.map(data =>
                     <Players key={data.id} data={data}/>

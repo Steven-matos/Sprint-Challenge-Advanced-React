@@ -12,7 +12,7 @@ function App() {
     <div>
       <div className='header'>
         <h1>National Womens Soccer Players!</h1>
-        <Button color='secondary'
+        <Button data-testid='btn-rendered' color='secondary'
                       onClick={toggleDark}
                       >{darkMode ? 'Light-Mode' : 'Dark-Mode'}
         </Button>
