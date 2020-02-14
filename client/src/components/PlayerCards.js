@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Players from './Players';
 
+//Styles
+import {Container, Row} from 'reactstrap';
+
 class PlayerCards extends Component {
     state = {
         soccerPlayer: []
@@ -24,12 +27,14 @@ class PlayerCards extends Component {
         console.log('Array of Players: ',this.state.soccerPlayer)
 
         return (
-            <div>
-                <h1>United Stated National Womens Soccer Players!</h1>
-                {this.state.soccerPlayer.map(data =>
-                    <Players key={data.id} data={data}/>
-                )}
-            </div>
+            <Container className="themed-container" fluid="sm">
+                <h1>National Womens Soccer Players!</h1>
+                <Row xs="4">
+                    {this.state.soccerPlayer.map(data =>
+                        <Players key={data.id} data={data}/>
+                    )}
+                </Row>
+            </Container>
         );
     }
 }
