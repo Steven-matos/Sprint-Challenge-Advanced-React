@@ -1,14 +1,21 @@
 import React from 'react';
 import PlayerCard from './components/PlayerCards';
+import {useDarkMode} from './hooks/useDarkMode'
 
-import { ButtonToggle } from 'reactstrap';
+import { Button } from 'reactstrap';
 
 function App() {
+  const [darkMode, toggleDark] = useDarkMode();
+
+
   return (
     <div>
       <div className='header'>
         <h1>National Womens Soccer Players!</h1>
-        <ButtonToggle color="secondary">Dark-Mode</ButtonToggle>
+        <Button color='secondary'
+                      onClick={toggleDark}
+                      >{darkMode ? 'Light-Mode' : 'Dark-Mode'}
+        </Button>
       </div>
       <PlayerCard />
     </div>
