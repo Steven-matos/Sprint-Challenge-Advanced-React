@@ -1,11 +1,22 @@
 import React from 'react';
 
+//Styling
+import {
+    Col, Card, CardHeader, CardBody,
+    CardTitle, CardFooter} from 'reactstrap';
+
 const Players = ({data}) => {
     console.log(data);
     return (
-        <div>
-            
-        </div>
+        <Col>
+            <Card>
+                <CardHeader>{data.name}</CardHeader>
+                <CardBody>
+                    <CardTitle>Country:{data.country}</CardTitle>
+                </CardBody>
+                <CardFooter>Popularity by Searches: {data.searches}</CardFooter>
+            </Card> 
+        </Col>
     );
 };
 
