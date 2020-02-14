@@ -10,6 +10,7 @@ class PlayerCards extends Component {
         soccerPlayer: []
     }
 
+    //Retreives data from the API and sets it to state
     componentDidMount(){
         axios.get('http://localhost:5000/api/players')
         .then(res => {
@@ -23,8 +24,6 @@ class PlayerCards extends Component {
     }
 
     render() {
-        console.log('Array of Players: ',this.state.soccerPlayer)
-
         return (
             <Container className="themed-container" fluid="sm">
             <Row xs="3">
