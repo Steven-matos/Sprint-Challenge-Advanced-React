@@ -22,18 +22,16 @@ class PlayerCards extends Component {
         })
     }
 
-
     render() {
         console.log('Array of Players: ',this.state.soccerPlayer)
 
         return (
             <Container className="themed-container" fluid="sm">
-                <h1>National Womens Soccer Players!</h1>
-                <Row xs="4">
-                    {this.state.soccerPlayer.map(data =>
-                        <Players key={data.id} data={data}/>
-                    )}
-                </Row>
+            <Row xs="3">
+                {this.state.soccerPlayer.map(data =>
+                    <Players key={data.id} data={data}/>
+                )}
+            </Row>
             </Container>
         );
     }

@@ -9,10 +9,10 @@ const Players = ({data}) => {
     console.log(data);
     return (
         <Col>
-            <Card>
+            <Card className='cards'>
                 <CardHeader>{data.name}</CardHeader>
                 <CardBody>
-                    <CardTitle>Country:{data.country}</CardTitle>
+                    <CardTitle>Country: {data.country}</CardTitle>
                 </CardBody>
                 <CardFooter>Popularity by Searches: {data.searches}</CardFooter>
             </Card> 
