@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Players = () => {
+const Players = ({data}) => {
+    console.log(data);
     return (
         <div>
             
