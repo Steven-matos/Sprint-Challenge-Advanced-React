@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import PlayerCard from './components/PlayerCards';
+import {useDarkMode} from './hooks/useDarkMode'
+
+import { Button } from 'reactstrap';
 
 function App() {
+  const [darkMode, toggleDark] = useDarkMode();
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className='header'>
+        <h1>National Womens Soccer Players!</h1>
+        <Button data-testid='btn-rendered' color='secondary'
+                      onClick={toggleDark}
+                      >{darkMode ? 'Light-Mode' : 'Dark-Mode'}
+        </Button>
+      </div>
+      <PlayerCard />
     </div>
   );
 }

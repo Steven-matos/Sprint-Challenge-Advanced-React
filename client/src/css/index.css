@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background: #f2f2f2;
+  padding: 1rem 0.5rem;
+}
+.header h1 {
+  padding: 0 2rem;
+}
+.cards {
+  margin: 1rem 0;
+}
+.dark-mode {
+  background-color: #0f4c75;
+  color: #f5f5f5;
+}
+.dark-mode .header {
+  background-color: #1b262c;
+}
+.dark-mode .card {
+  border: darkgray;
+  color: #bbe1fa;
+}
+.dark-mode .card-header {
+  background-color: #1b262c;
+}
+.dark-mode .card-footer {
+  background-color: #1b262c;
+}
+.dark-mode .card-body {
+  background-color: #3282b8;
+}
